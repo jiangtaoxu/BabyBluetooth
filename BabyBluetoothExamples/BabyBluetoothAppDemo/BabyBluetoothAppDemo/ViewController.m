@@ -59,7 +59,7 @@
     
     __weak typeof(self) weakSelf = self;
     [baby setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
-        if (central.state == CBCentralManagerStatePoweredOn) {
+        if (central.state == CBManagerStatePoweredOn) {
             [SVProgressHUD showInfoWithStatus:@"设备打开成功，开始扫描设备"];
         }
     }];

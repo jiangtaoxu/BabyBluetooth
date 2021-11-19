@@ -80,8 +80,8 @@
     }];
     //设置读取Descriptor的委托
     [baby setBlockOnReadValueForDescriptorsAtChannel:channelOnCharacteristicView block:^(CBPeripheral *peripheral, CBDescriptor *descriptor, NSError *error) {
-        for (int i =0 ; i<descriptors.count; i++) {
-            if (descriptors[i]==descriptor) {
+        for (int i =0 ; i<self->descriptors.count; i++) {
+            if (self->descriptors[i]==descriptor) {
                 UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:2]];
 //                NSString *valueStr = [[NSString alloc]initWithData:descriptor.value encoding:NSUTF8StringEncoding];
                 cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",descriptor.value];

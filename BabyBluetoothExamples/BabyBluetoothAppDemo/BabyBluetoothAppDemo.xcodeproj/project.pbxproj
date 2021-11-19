@@ -228,10 +228,9 @@
 			};
 			buildConfigurationList = E1807E681B6CA29100E99C63 /* Build configuration list for PBXProject "BabyBluetoothAppDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
