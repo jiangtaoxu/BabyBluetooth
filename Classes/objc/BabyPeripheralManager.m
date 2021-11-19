@@ -27,7 +27,7 @@
 }
 
 
-- (BabyPeripheralManager *(^)())startAdvertising {
+- (BabyPeripheralManager *(^)(void))startAdvertising {
     return ^BabyPeripheralManager *() {
         
         if ([self canStartAdvertising]) {
@@ -69,7 +69,7 @@
     };
 }
 
-- (BabyPeripheralManager *(^)())stopAdvertising {
+- (BabyPeripheralManager *(^)(void))stopAdvertising {
     return ^BabyPeripheralManager*() {
         [_peripheralManager stopAdvertising];
         return self;
@@ -101,7 +101,7 @@
     };
 }
 
-- (BabyPeripheralManager *(^)())removeAllServices {
+- (BabyPeripheralManager *(^)(void))removeAllServices {
     return ^BabyPeripheralManager*() {
         didAddServices = 0;
         [_peripheralManager removeAllServices];
@@ -256,7 +256,7 @@ CBMutableService* makeCBService(NSString *UUID)
     return s;
 }
 
-NSString * genUUID()
+NSString * genUUID(void)
 {
     CFUUIDRef uuid_ref = CFUUIDCreate(NULL);
     CFStringRef uuid_string_ref= CFUUIDCreateString(NULL, uuid_ref);
